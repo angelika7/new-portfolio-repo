@@ -1,0 +1,122 @@
+@import './variables.module';
+@import './mixins.module';
+
+.headingPrimary {
+    font-size: 14.4rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: .05rem;
+    color: hsl(160, 40%, 30%);
+    text-shadow: 0 0 40px hsla(0, 0%, 0%, .4);
+
+    @media (min-width: $bp-largest) {
+        font-size: 19.2rem;
+    }
+
+    @media (max-width: 1150px) {
+        font-size: 13rem;
+    }
+
+    @media (max-width: 1095px) {
+        font-size: 11rem;
+    }
+
+    @media (max-width: $bp-small) {
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    @media (max-width: $bp-mobile-l) {
+        font-size: 7rem;
+    }
+
+    @media (max-width: $bp-mobile-m) {
+        font-size: 5.5rem;
+    }
+}
+
+.headingSecondary {
+    font-size: 7rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    letter-spacing: .05rem;
+    color: hsl(6, 59%, 76%);
+
+    @media (min-width: $bp-largest) {
+        font-size: 9rem;
+    }
+
+    @media (max-width: $bp-mobile-l) {
+        font-size: 6rem;
+    }
+
+    @media (max-width: $bp-mobile-m) {
+        font-size: 5rem;
+    }
+
+    @media (max-width: $bp-mobile-s) {
+        font-size: 4rem;
+    }
+
+    &___dark {
+        color: $color-polished-pine-dark3;
+    }
+}
+
+.headingTertiary {
+    font-size: 4.8rem;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    letter-spacing: .05rem;
+    color: hsl(6, 59%, 76%);
+
+    @media (max-width: $bp-mobile-m) {
+        text-align: center;
+    }
+
+    @media (max-width: $bp-mobile-s) {
+        font-size: 3.8rem;
+    }
+}
+
+.textInfo {
+    font-size: 1.6rem;
+    color: #0D0D0D;
+    line-height: 1.75;
+    text-align: center;
+}
+
+.info {
+    font-size: 1.4rem;
+    line-height: 1.75;
+    text-align: center;
+    color: $color-polished-pine-dark3;
+
+    &___title {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &___tools {
+        font-weight: 700;
+        color: $color-dark-2;
+        font-size: 1.6rem;
+    }
+
+    &___footer {
+        font-size: 1.4rem;
+        color: $color-baby-pink-light1;
+
+        @media (min-width: $bp-largest) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &___skills {
+        color: #0D0D0D;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+}
+

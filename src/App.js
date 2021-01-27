@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+
+import Layout from './containers/Layout/Layout';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Projects from './components/Projects/Projects';
+import Stack from './components/Stack/Stack';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import Toolbar from './components/Navigation/Toolbar/Toolbar';
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    let intViewportWidth = window.innerWidth;
+
+    if(intViewportWidth <= 850) {
+      setVisible(true)
+    }
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Layout>
+        <Toolbar onClick={() => {setOpen(!open)}} open={open} isVisible={visible}/>
+        <Header />
+        <main>
+          <About />
+          <Projects />
+          <Stack />
+          <Contact />
+        </main>
+        <Footer />
+      </Layout>
+    </React.Fragment>  
+  
   );
 }
 

@@ -1,0 +1,49 @@
+@import './../../styles/variables.module';
+@import './../../styles/mixins.module';
+
+.item {
+    position: relative;
+    width: 30rem;
+    height: 28rem;
+    border-radius: 5rem;
+    border: 2px solid $color-champagne-pink-dark3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 3rem;
+
+    @media (min-width: $bp-largest) {
+        width: 33rem;
+        height: 36rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        margin: 3rem 1rem;
+    }
+}
+
+.imgBox {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: $color-champagne-pink-light1;
+    @include flex-center-row;
+    margin-bottom: 1rem;
+}
+
+.img {
+    height: 8rem;
+    filter: opacity(65%);
+
+    @media (min-width: $bp-largest) {
+        height: 65%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.textBox {
+    margin-top: 1rem;
+    @include flex-center-row;
+}
+

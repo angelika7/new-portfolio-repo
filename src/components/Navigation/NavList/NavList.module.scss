@@ -1,0 +1,40 @@
+@import './../../../styles/variables.module';
+
+.navList {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+
+    @media (max-width: 1380px) {
+        width: 70%;
+    }
+
+    @media (max-width: 1095px) {
+        width: 80%;
+    }
+
+    @media (max-width: $bp-medium) {
+        width: 90%;
+    }
+
+    @media (max-width: $bp-small) {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        transform: translate(100%, -100%);
+        transition: all .3s;
+        background-color: $color-white;
+        top: 0;
+        left: 0;
+        margin: auto 0;
+        height: 100vh;
+        padding: 15rem;
+    }
+}
+
+.isOpened {
+    transform: translate(0%, 0%);
+}

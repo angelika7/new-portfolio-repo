@@ -1,0 +1,92 @@
+@import './../../../styles/variables.module';
+@import './../../../styles/mixins.module';
+
+.burgerBox {
+    display: none;
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    top: 1rem;
+    right: 0%;
+    background-color: rgba($color-white, .8);
+    border-radius: 50%;
+    padding: 1rem;
+    opacity: 1;
+    transform: rotate(0);
+    transition: all .5s;
+    z-index: 9999;
+    border: none;
+    outline-color: $color-cambridge-blue-dark3;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    @media (max-width: $bp-small) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        right: 0;
+    }
+
+    @media (max-width: $bp-mobile-s) {
+        width: 5.5rem;
+    }
+
+    @media (max-width: 280px) {
+        height: 5rem;
+    }
+}
+
+.line {
+    position: absolute;
+    border-radius: 5px;
+    width: 3rem;
+    background-color: $color-polished-pine-dark3;
+    height: 3px;
+    transition: all .3s;
+
+    @media (max-width: 280px) {
+        height: 3px;
+    }
+
+    &:nth-child(1) {
+        top: 2.5rem;
+
+        @media (max-width: 280px) {
+            top: 1.15rem;
+        }
+    }
+
+    &:nth-child(2) {
+        top: 3.5rem;
+
+        @media (max-width: 280px) {
+            top: 2.15rem;
+        }
+    }
+
+    &:nth-child(3) {
+        top: 4.5rem;
+
+        @media (max-width: 280px) {
+            top: 3.25rem;
+        }
+    }
+}
+
+.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.open span:nth-child(1) {
+    top: 3.3rem;
+    transform: rotate(135deg);
+}
+
+.open span:nth-child(3) {
+    top: 3.3rem;
+    transform: rotate(-135deg);
+}

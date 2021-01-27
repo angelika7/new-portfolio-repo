@@ -1,0 +1,33 @@
+@import './../../../styles/variables.module';
+@import './../../../styles/mixins.module';
+
+.toolbar {
+    @include top-bar;
+    @include flex-center-row;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+	z-index: 999; 
+
+}
+
+.circle {
+    border-radius: 50%;
+	width: 0;
+	height: 0; 
+	position: absolute;
+	top: 1rem;
+	right: 0rem;
+	background-color: $color-white;
+	opacity: 1;
+	transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);		
+}
+.expand{
+	width: 120rem;
+	height: 120rem;
+	top: -6rem;
+	right: -5.65rem; 	
+	transition: all 400ms cubic-bezier(0.000, 0.995, 0.990, 1.000);						
+	
+}

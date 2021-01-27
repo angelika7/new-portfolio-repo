@@ -1,0 +1,13 @@
+@import './../../styles/variables.module';
+@import './../../styles/mixins.module';
+
+.footer {
+    width: 100%;
+    padding: 3rem;
+    background-color: $color-baby-pink-main;
+    @include flex-center-row;
+
+    @media (min-width: $bp-largest) {
+        height: 11rem;
+    }
+}

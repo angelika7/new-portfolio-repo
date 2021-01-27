@@ -1,0 +1,113 @@
+//MINT
+
+$color-light-mint-1: #F6FEFA;
+$color-light-mint-2: #D8F4E6;
+$color-light-mint-3: #AEE2C8;
+
+$color-mint-1: #A7E6D6;
+$color-mint-2: #7DC5A1;
+
+$color-dark-mint-1: #78CCB7;
+$color-dark-mint-2: #4CA992;
+
+$color-green-dark: #295B4B;
+
+//PINK
+
+$color-light-pink-1: #FEF7FA;
+$color-light-pink-2: #FADEE8;
+$color-light-pink-3: #F3BCCF;
+
+$color-pink-1: #FBB6C2;
+$color-pink-2: #E793B1;
+
+$color-dark-pink-1: #F691A3;
+$color-dark-pink-2: #F06C84;
+
+//DARK
+$color-dark: #424242;
+$color-dark-2: #080808;
+
+
+/////////////////////////////////////////////
+///////////// PRIMARY COLOR
+$color-polished-pine-light1: hsl(159, 26%, 68%);
+$color-polished-pine-light2: hsl(160, 26%, 64%);
+$color-polished-pine-light3: hsl(160, 26%, 60%);
+$color-polished-pine-main: hsl(161, 26%, 53%);
+$color-polished-pine-dark1: hsl(160, 26%, 52%);
+$color-polished-pine-dark2: #5b9a85;
+$color-polished-pine-dark3: hsl(160, 26%, 44%);
+
+
+//////////////// SECONDARY COLOR
+$color-white: hsl(0, 0%, 100%);
+$color-baby-pink-light1: hsl(10, 60%, 96%);
+$color-baby-pink-light2: #f6e2df;
+$color-baby-pink-main: hsl(7, 58%, 85%);
+$color-baby-pink-dark1: #eec3bf;
+$color-baby-pink-dark2: hsl(6, 59%, 80%);
+$color-baby-pink-dark3: hsl(6, 59%, 76%);
+
+
+/////////////NEUTRAL COLOR
+$color-gray-light1: hsl(0, 0%, 96%);
+$color-gray-light2: hsl(0, 0%, 92%);
+$color-gray-light3: hsl(0, 0%, 88%);
+$color-gray-main: hsl(0, 0%, 84%);
+$color-gray-dark1: hsl(0, 0%, 80%);
+$color-gray-dark2: hsl(0, 0%, 76%);
+$color-gray-dark3: hsl(0, 0%, 72%);
+
+////////////////// ACCENTS COLOR
+$color-champagne-pink-light1: hsl(24, 100%, 96%);
+$color-champagne-pink-main: rgb(255, 231, 214);
+$color-champagne-pink-dark1: hsl(24, 100%, 88%);
+$color-champagne-pink-dark2: hsl(24, 100%, 84%);
+$color-champagne-pink-dark3: hsl(24, 100%, 80%);
+
+
+$color-cambridge-blue-light1: rgb(230, 239, 232);
+$color-cambridge-blue-light2: rgb(218, 231, 220);
+$color-cambridge-blue-light3: hsl(127, 20%, 84%);
+$color-cambridge-blue-main: hsl(126, 19%, 79%);
+$color-cambridge-blue-dark1: hsl(125, 19%, 76%);
+$color-cambridge-blue-dark2: hsl(124, 19%, 72%);
+$color-cambridge-blue-dark3: hsl(124, 19%, 68%);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+// Breakpoints
+
+$bp-largest: 118.75em;     // min. 1800px
+$bp-large: 64em;    // 1024px
+$bp-medium: 60.625em;   // 970px
+$bp-medium-extra: 56.25em;   // 900px
+$bp-small: 53.125em;     // 850px
+$bp-small-extra: 43.125em; // 690px
+$bp-smallest: 37.5em; // 600px
+$bp-mobile-l: 34.375em; // 550px
+$bp-mobile-m: 28.75em; // 460px
+$bp-mobile-s: 23.4375em; // < 375px

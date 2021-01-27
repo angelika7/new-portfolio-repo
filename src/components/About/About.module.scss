@@ -1,0 +1,208 @@
+@import './../../styles/variables.module';
+@import './../../styles/mixins.module';
+
+.about {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 3rem;
+    margin-top: 6rem;
+
+    @media (max-width: $bp-smallest) {
+        width: 98%;
+        margin-top: 18rem;
+    }
+}
+
+.sloganBox {
+    @media (max-width: $bp-smallest) {
+        @include flex-center-row;
+        
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media (max-width: 1250px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.rightSide {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (max-width: 1250px) {
+        justify-content: center;
+    }
+}
+
+.fotoBox {
+    height: 35rem;
+    width: 40rem;
+    position: relative;
+
+    @media (max-width: 1250px) {
+        margin-top: 10rem;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    &_foto {
+        height: 28rem;
+        width: 23rem;
+        padding: 2rem;
+        position: absolute;
+
+        @media (min-width: $bp-largest) {
+            width: 36rem;
+            height: 41rem;
+        }
+
+        @media (max-width: 1250px) {
+            position: relative;
+        }
+
+        &___one {
+            @include fill-img;
+            position: absolute;
+            top: 5rem;
+            left: -17rem;
+
+            @media (min-width: $bp-largest) {
+                left: -48rem;
+                top: -5rem;
+            }
+
+            @media (max-width: 1250px) {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &___two {
+            @include fill-img;
+            position: absolute;
+            top: 3rem;
+            right: -17rem;
+
+            @media (min-width: $bp-largest) {
+                top: -5rem;
+                right: -4rem;
+            }
+
+            @media (max-width: 1250px) {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &___three {
+            @include fill-img;
+            position: absolute;
+            top: 20rem;
+            right: 2rem;
+            z-index: 50;
+
+            @media (min-width: $bp-largest) {
+                top: 25rem;
+                right: 24.5rem;
+            }
+
+            @media (max-width: 1250px) {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &___four {
+            @include fill-img;
+            position: absolute;
+            top: -7rem;
+            right: 2rem;
+            overflow: hidden;
+
+            @media (min-width: $bp-largest) {
+                top: -15rem;
+                right: 26rem;
+            }
+
+            @media (max-width: 1250px) {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            @media (max-width: 1170px) {
+                width: 100%;
+            }
+        }
+    } 
+}
+
+.leftSide {
+    margin-top: 6rem;
+
+    @media (max-width: 1250px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.descriptionBox {
+    width: 70%;
+
+    @media (max-width: $bp-mobile-m) {
+        width: 90%;
+        
+    }
+}
+
+.blob {
+    position: absolute;
+    top: 35rem;
+    right: 43rem;
+    width: 25rem;
+    z-index: 11;
+
+    @media (min-width: $bp-largest) {
+        top: 35rem;
+        right: 63rem;
+    }
+
+    @media (max-width: 1250px) {
+        right: 73rem;
+    }
+
+    &___dark {
+        top: 27rem;
+        right: 45rem;
+        width: 30rem;
+        z-index: 10;
+
+        @media (min-width: $bp-largest) {
+            top: 29rem;
+            right: 70rem;
+        }
+
+        @media (max-width: 1250px) {
+            right: 85rem;
+        }
+    }
+}

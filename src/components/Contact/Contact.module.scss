@@ -1,0 +1,167 @@
+@import './../../styles/variables.module';
+@import './../../styles/mixins.module';
+
+.contact {
+    width: 100%;
+    margin-top: 8rem;
+    position: relative;
+    background-color: hsl(133, 32%, 97%);
+    padding-bottom: 10rem;
+    overflow: hidden;
+
+    @media (min-width: $bp-largest) {
+        margin-top: 10rem;
+        height: 40rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        padding-bottom: 18rem;
+    }
+}
+
+.content {
+    width: 80%;
+    margin: 1rem auto 0 auto;
+    display: flex;
+
+    @media (max-width: $bp-medium) {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    @media (max-width: $bp-smallest) {
+        width: 100%;
+    }
+}
+
+.infoBox {
+    position: absolute;
+    top: 19rem;
+    right: 10%;
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-end;
+
+    @media (max-width: $bp-small) {
+        top: 30rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+    }
+}
+
+.icon {
+    font-size: 6rem;
+    color: $color-polished-pine-light3;
+    transition: all .3s;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-polished-pine-dark3;
+    }
+
+    @media (min-width: $bp-largest) {
+        font-size: 9rem;
+    }
+
+    @media (max-width: $bp-medium-extra) {
+        font-size: 5rem;
+    }
+}
+
+.sloganBox {
+    position: absolute;
+    top: 17rem;
+    left: 10%;
+
+    @media (max-width: $bp-smallest) {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.form{
+    margin: 0 0 8rem 0;
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, .7), 0 5px 15px hsla(0, 0%, 0%, .1);
+    border-radius: 5px;
+    padding: 3rem;
+    background-color: $color-white;
+    width: 70rem;
+    border-top: 7px solid $color-polished-pine-main;
+
+    @media (max-width: 1400px) {
+        margin: 5rem 0 10rem 0 ;
+    }
+
+    @media (max-width: 1300px) {
+        margin: 10rem 0 15rem 0 ;
+    }
+
+    @media (max-width: $bp-medium) {
+        margin-top: 15rem;
+    }
+
+    @media (max-width: $bp-small) {
+        margin-top: 25rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        margin-top: 35rem;
+        width: 100%;
+        padding: 5rem 1.5rem;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+}
+
+.btn {
+    background-color: $color-polished-pine-dark3;
+    color: $color-white;
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 1px 3px hsla(0, 0%, 0%, .2);
+    border-radius: 5px;
+    padding: 2rem;
+    width: 36rem;
+    transition: all .2s;
+
+    @media (max-width: $bp-smallest) {
+        width: 100%;
+    }
+
+
+
+    &:hover {
+        cursor: pointer;
+        background-color: $color-polished-pine-main;
+    }
+}
+
+.describeBox {
+    position: absolute;
+    right: 10%;
+    top: 88%;
+
+    @media (max-width: $bp-smallest) {
+        right: 50%;
+        transform: translateX(50%);
+        width: 96%;
+        @include flex-center-row;
+        margin-top: -10rem;
+    }
+}
+
+.decoration {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    height: 23rem;
+}

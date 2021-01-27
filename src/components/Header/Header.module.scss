@@ -1,0 +1,213 @@
+@import './../../styles/variables.module';
+@import './../../styles/mixins.module';
+
+.header { 
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+        hsla(133, 24%, 96%, .85), 
+        hsla(133, 24%, 96%, .85)),
+        url(../../assets/images/9-min.jpg);
+    @include bg-properties;
+    position: relative;
+
+    @media (max-width: $bp-small) {
+        overflow: visible;
+    }
+}
+
+.wave {
+    position: absolute;
+    top: -7rem;
+    left: 0;
+
+    @media (max-width: 1350px) {
+        top: -4rem;
+    }
+
+    @media (max-width: 1050px) {
+        top: -2rem;
+    }
+
+    &___bottom {
+        top: 73%;
+
+        @media (min-width: $bp-largest) {
+            top: 69%;
+        }
+
+        @media (max-width: $bp-medium-extra) {
+            top: 85%;
+        }
+
+        @media (max-width: 420px) {
+            top: 92%;
+        }
+    }
+}
+
+.imgBox {
+    position: absolute;
+    height: 50rem;
+    width: 30rem;
+    top: 27%;
+    right: 10%;
+    background-color: transparent;
+
+    @media (min-width: $bp-largest) {
+        height: 76.5rem;
+        width: 47rem;
+        right: 10%;
+    }
+
+    @media (max-width: 1160px) {
+        width: 27rem;
+    }
+
+    @media (max-width: $bp-medium) {
+        width: 20rem;
+        height: 35rem;
+        top: 45%;
+    }
+
+    @media (max-width: $bp-small) {
+        top: 65%;
+    }
+
+    @media (max-width: $bp-smallest) {
+        left: 0%;
+        top: 60%;
+    }
+}
+
+.blob {
+    position: absolute;
+    top: -27rem;
+    right: -43rem;
+    z-index: 9;
+
+    @media (min-width: $bp-largest) {
+        right: -65rem;
+        top: -38rem;
+    }
+
+    @media (max-width: $bp-small) {
+        top: -5rem;
+        right: 0;
+        left: -25rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        display: none;
+    }
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 50;
+    box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, .2);
+
+    @media (max-width: $bp-smallest) {
+        left: 50%;
+    }
+}
+
+.sloganBox {
+    position: absolute;
+    height: auto;
+    width: 80rem;
+    top: 20%;
+    left: 0;
+    padding: 3rem;
+    z-index: 22;
+    @include flex-center-row;
+
+    @media (min-width: $bp-largest) {
+        left: 10%;
+        width: 120rem;
+        top: 30%;
+    }
+
+    @media (max-width: 1140px) {
+        width: 70rem;
+    }
+
+    @media (max-width: $bp-small) {
+        width: 55rem; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: $bp-smallest) {
+        width: 53rem;
+    }
+
+    @media (max-width: $bp-mobile-l) {
+        width: 49rem;
+    }
+
+    @media (max-width: $bp-mobile-m) {
+        width: auto;
+    }
+}
+
+.nameBox {
+    position: absolute;
+    top: 66%;
+    left: 0;
+    padding: 3rem;
+
+    @media (min-width: $bp-largest) {
+        left: 10%;
+    }
+
+    @media (max-width: $bp-small) {
+        top: 10%;
+    }
+
+    @media (max-width: $bp-mobile-m) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.name {
+    font-family: 'Notera';
+    src: url(../../assets/fonts/Notera.ttf) format('ttf');
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.5rem;
+    white-space: nowrap;
+    overflow: hidden; 
+
+    @media (min-width: $bp-largest) {
+        font-size: 9rem;
+    }
+
+    @media (max-width: $bp-mobile-l) {
+        font-size: 4rem;
+    }
+
+    @media (max-width: $bp-mobile-m) {
+        font-size: 3rem;
+    }
+} 
+
+.typing {
+    animation: typing 2s steps(40, end) 1,
+}
+
+@keyframes typing {
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+
+
