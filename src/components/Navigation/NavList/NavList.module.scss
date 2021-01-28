@@ -38,3 +38,9 @@
 .isOpened {
     transform: translate(0%, 0%);
 }
+
+
+.active {
+    color: $color-baby-pink-dark3 !important;   
+    border-bottom: .4rem solid $color-baby-pink-dark3; 
+} 
