@@ -43,7 +43,8 @@ class NavList extends Component {
           key={el.key} 
           id={el.id} 
           link={el.id} 
-          active={el.active}>{el.name}</NavItem>
+          active={el.active}
+          isVisible={this.props.isVisible}>{el.name}</NavItem>
         })}
       </ul>
     )
