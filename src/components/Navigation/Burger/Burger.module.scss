@@ -39,13 +39,13 @@
     @media (max-width: 280px) {
         height: 5rem;
         width: 5rem;
-    }
+    } 
 }
 
 .line {
     position: absolute;
     border-radius: 5px;
-    width: 3rem;
+    width: 2.5rem;
     background-color: $color-polished-pine-dark3;
     height: 3px;
     transition: all .3s;
@@ -57,6 +57,10 @@
     &:nth-child(1) {
         top: 2.5rem;
 
+        @media (max-width: $bp-mobile-s) {
+            top: 1.7rem;
+        }
+
         @media (max-width: 280px) {
             top: 1.15rem;
         }
@@ -65,6 +69,10 @@
     &:nth-child(2) {
         top: 3.5rem;
 
+        @media (max-width: $bp-mobile-s) {
+            top: 2.7rem;
+        }
+
         @media (max-width: 280px) {
             top: 2.15rem;
         }
@@ -72,6 +80,10 @@
 
     &:nth-child(3) {
         top: 4.5rem;
+
+        @media (max-width: $bp-mobile-s) {
+            top: 3.7rem;
+        }
 
         @media (max-width: 280px) {
             top: 3.25rem;
@@ -86,9 +98,17 @@
 .open span:nth-child(1) {
     top: 3.3rem;
     transform: rotate(135deg);
+
+    @media (max-width: $bp-mobile-s) {
+        top: 2.7rem;
+    }
 }
 
 .open span:nth-child(3) {
     top: 3.3rem;
     transform: rotate(-135deg);
+
+    @media (max-width: $bp-mobile-s) {
+        top: 2.7rem;
+    }
 }

@@ -90,9 +90,7 @@
     @media (max-width: $bp-smallest) {
         width: 100%;
     }
-
-
-
+    
     &:hover {
         cursor: pointer;
         background-color: $color-polished-pine-main;
@@ -100,7 +98,7 @@
 }
 
 .message {
-    padding: 5rem 0;
+    padding: 5rem 2rem;
     width: 55%;
 }
 
@@ -110,5 +108,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-top: 7px solid red;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
 }
