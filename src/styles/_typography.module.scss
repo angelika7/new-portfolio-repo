@@ -81,8 +81,8 @@
 }
 
 .textInfo {
-    font-size: 1.6rem;
-    color: #0D0D0D;
+    font-size: $default-font-size;
+    color: $color-dark;
     line-height: 1.75;
     text-align: center;
 }
@@ -100,8 +100,8 @@
 
     &___tools {
         font-weight: 700;
-        color: $color-dark-2;
-        font-size: 1.6rem;
+        color: $color-dark;
+        font-size: $default-font-size;
     }
 
     &___footer {
@@ -109,12 +109,12 @@
         color: $color-baby-pink-light1;
 
         @media (min-width: $bp-largest) {
-            font-size: 1.6rem;
+            font-size: $default-font-size;
         }
     }
 
     &___skills {
-        color: #0D0D0D;
+        color: $color-dark;
         font-size: 1.4rem;
         line-height: 2.1rem;
     }

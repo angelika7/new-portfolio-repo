@@ -27,7 +27,7 @@ function App() {
         <Toolbar onClick={() => {setOpen(!open)}} open={open} isVisible={visible}/>
         <Header />
         <main>
-          <About />
+          <About/>
           <Projects />
           <Stack />
           <Contact />
