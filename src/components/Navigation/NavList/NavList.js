@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ScrollspyNav from "react-scrollspy-nav";
+//import ScrollspyNav from "react-scrollspy-nav";
 
 import NavItem from './../NavItem/NavItem';
 import classes from './NavList.module.scss';
