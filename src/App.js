@@ -19,7 +19,7 @@ function App() {
     if(intViewportWidth <= 850) {
       setVisible(true)
     }
-  },[])
+  }, [window.innerWidth])
 
   return (
     <React.Fragment>

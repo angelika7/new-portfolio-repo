@@ -13,7 +13,7 @@ const Toolbar = (props) => {
             if(scrollPos > 0) {
                 setBg(true)
             } 
-            if(scrollPos === 0) {
+            if(scrollPos === 0 || window.innerWidth <= 850) {
                 setBg(false)
             } 
         };
