@@ -9,17 +9,50 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Toolbar from './components/Navigation/Toolbar/Toolbar';
 
+const useWindowSize = () => {
+
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+  // Handler to call on window resize
+  const handleResize = () => {
+    // Set window width/height to state
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }
+  
+  // Add event listener
+  window.addEventListener("resize", handleResize);
+  
+  // Call handler right away so state gets updated with initial window size
+  handleResize();
+  
+  // Remove event listener on cleanup
+  return () => window.removeEventListener("resize", handleResize);
+}, []); // Empty array ensures that effect is only run on mount
+
+return windowSize;
+}
+
 function App() {
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    let intViewportWidth = window.innerWidth;
+  
+  const size = useWindowSize();
 
-    if(intViewportWidth <= 850) {
+
+  useEffect(() => {
+
+    if(size.width <= 850) {
       setVisible(true)
     }
-  }, [window.innerWidth])
+  }, [size.width])
 
   return (
     <React.Fragment>
