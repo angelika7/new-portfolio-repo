@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './Contact.module.scss';
 import { Link } from 'react-router-dom';
 import styleText from './../../styles/_typography.module.scss';
@@ -12,8 +12,32 @@ import { faGooglePlusSquare } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
+
 
 const Contact = (props) => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+        if(!inView) {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const list = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+      }
+
+    const item = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -100 },
+      }
 
     return (
     <section className={classes.contact} id='contact'>
@@ -22,12 +46,12 @@ const Contact = (props) => {
             <div className={[styleBox.sloganBox, classes.sloganBox].join(' ')}>
                 <h2 className={[styleText.headingSecondary, styleText.headingSecondary___dark].join(' ')}>Kontakt</h2>
             </div>
-            <div className={classes.infoBox}>
-                <Link to={{ pathname: "https://www.facebook.com/angelika.chochorowska/" }} target="_blank"><FontAwesomeIcon icon={faFacebookSquare} className={classes.icon} /></Link>
-                <a href="mailto:angelika.chochorowska7@gmail.com"><FontAwesomeIcon icon={faGooglePlusSquare} className={classes.icon} /></a>
-                <Link to={{ pathname: "https://www.linkedin.com/in/angelika-chochorowska-18515b183/" }} target="_blank"><FontAwesomeIcon icon={faLinkedin} className={classes.icon} /></Link>
-                <Link to={{ pathname: "https://github.com/angelika7" }} target="_blank"><FontAwesomeIcon icon={faGithubSquare} className={classes.icon} /></Link>
-            </div>
+            <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={list} className={classes.infoBox}>
+                <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={item}><Link to={{ pathname: "https://www.facebook.com/angelika.chochorowska/" }} target="_blank"><FontAwesomeIcon icon={faFacebookSquare} className={classes.icon} /></Link></motion.div>
+                <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={item}><a href="mailto:angelika.chochorowska7@gmail.com"><FontAwesomeIcon icon={faGooglePlusSquare} className={classes.icon} /></a></motion.div>
+                <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={item}><Link to={{ pathname: "https://www.linkedin.com/in/angelika-chochorowska-18515b183/" }} target="_blank"><FontAwesomeIcon icon={faLinkedin} className={classes.icon} /></Link></motion.div>
+                <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={item}><Link to={{ pathname: "https://github.com/angelika7" }} target="_blank"><FontAwesomeIcon icon={faGithubSquare} className={classes.icon} /></Link></motion.div>
+            </motion.div>
             <Form />
             <div className={classes.describeBox}>
                 <h3 className={styleText.headingTertiary}>Let's work together!</h3>

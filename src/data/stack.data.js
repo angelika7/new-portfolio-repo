@@ -12,6 +12,7 @@ import sass from './../assets/images/sass.png';
 import mongo from './../assets/images/mongo.png';
 import bootstrap from './../assets/images/bootstrap.png';
 import express from './../assets/images/express.png';
+import php from './../assets/images/php.png';
 
 const check = '\u25CF';
 
@@ -28,11 +29,12 @@ const data = {
     toolsImgOnly: [
         {id: 0, url: jquery, alt: 'jQuery Icon', info: 'jQuery'},
         {id: 1, url: bootstrap, alt: 'Bootstrap Icon', info: 'Bootstrap4'},
-        {id: 2, url: sass, alt: 'Sass Icon', info: 'Sass (Scss)'},
-        {id: 3, url: webpack, alt: 'Webpack Icon', info: 'Webpack'},
-        {id: 4, url: grunt, alt: 'GruntJs Icon', info: 'Grunt.js'},
-        {id: 5, url: git, alt: 'Git Icon', info: 'Git'},
-        {id: 6, url: npm, alt: 'NPM Icon', info: 'NPM'}
+        {id: 2, url: php, alt: 'PHP Icon', info: 'PHP', small: 'true'},
+        {id: 3, url: sass, alt: 'Sass Icon', info: 'Sass (Scss)'},
+        {id: 4, url: webpack, alt: 'Webpack Icon', info: 'Webpack'},
+        {id: 5, url: grunt, alt: 'GruntJs Icon', info: 'Grunt.js'},
+        {id: 6, url: git, alt: 'Git Icon', info: 'Git'},
+        {id: 7, url: npm, alt: 'NPM Icon', info: 'NPM'}
     ]
 }
 

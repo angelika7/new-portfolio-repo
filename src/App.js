@@ -67,8 +67,7 @@ function App() {
         </main>
         <Footer />
       </Layout>
-    </React.Fragment>  
-  
+  </React.Fragment>  
   );
 }
 

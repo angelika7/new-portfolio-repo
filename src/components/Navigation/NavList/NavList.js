@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import ScrollspyNav from "react-scrollspy-nav";
 
 import NavItem from './../NavItem/NavItem';
 import classes from './NavList.module.scss';
@@ -8,23 +7,25 @@ import classes from './NavList.module.scss';
 class NavList extends Component {
   state = {
     IDs: [
-      {key: 0, id: '#home', section: 'home', name: 'Home', active: true},
-      {key: 1, id: '#about', section: 'about', name: 'O mnie'},
-      {key: 2, id: '#projects', section: 'projects', name: 'Projekty'},
-      {key: 3, id: '#stack', section: 'stack', name: 'Umiejętności'},
-      {key: 4, id: '#contact', section: 'contact', name: 'Kontakt'}
-    ]
+      {key: 0, id: 'home', section: '0', name: 'Home', active: true},
+      {key: 1, id: 'about', section: '1', name: 'O mnie'},
+      {key: 2, id: 'projects', section: '2', name: 'Projekty'},
+      {key: 3, id: 'stack', section: '3', name: 'Umiejętności'},
+      {key: 4, id: 'contact', section: '4', name: 'Kontakt'}
+    ],
+    isTop: true
+  }
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== this.state.isTop) {
+          this.setState({ isTop })
+      }
+    });
   }
 
   render() {
-    {/* <ScrollspyNav
-        scrollTargetIds={["home", "about", "projects", "stack", "contact"]}
-        offset={100}
-        activeNavClass={classes.active}
-        scrollDuration="1000"
-        headerBackground="true"
-      >  */}
-      {/* </ScrollspyNav> */}
 
 
     return (
@@ -35,11 +36,11 @@ class NavList extends Component {
             onClick={this.props.onClick} 
             open={this.props.open} 
             key={el.key} 
-            id={el.id} 
+            id={el.section} 
             link={el.id} 
             active={el.active} 
             isVisible={this.props.isVisible}>{el.name}</NavItem>
-          })}
+          })} 
       </ul>
     
     )

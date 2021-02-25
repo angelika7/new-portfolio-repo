@@ -1,21 +1,42 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styleText from './../../styles/_typography.module.scss';
 import classes from './ProjectItem.module.scss';
-
-import project from './../../assets/images/project-cafes.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'; 
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
-const projectItem = (props) => {
+const ProjectItem = (props) => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+        if(!inView) {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variants = {
+        hidden: { scale: 0 },
+        visible: {
+            scale: 1,
+            transition: {
+                duration: 0.3,
+            },
+        } 
+    }
 
     return (
         <React.Fragment>
-            <div className={classes.item} onClick={() => {props.onClick(props.id)}}>
-                <img className={classes.project} src={project} alt=''></img>
+            <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={variants} className={classes.item} onClick={() => {props.onClick(props.id)}}>
+                <img className={classes.project} src={props.url} alt=''></img>
                 <div className={classes.titleBox}>
                     <p className={styleText.info}>{props.info}</p>
                     <p className={[styleText.info, styleText.info___title].join(' ')}>{props.title}</p>
@@ -40,9 +61,9 @@ const projectItem = (props) => {
                         <p className={[styleText.info, styleText.info___technologies].join(' ')}>{props.backInfo}</p>
                     </div> 
                 </div> 
-            </div>
+            </motion.div>
         </React.Fragment>
     );
 }
 
-export default projectItem;
+export default ProjectItem;

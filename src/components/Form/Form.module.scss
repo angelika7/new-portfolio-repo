@@ -1,6 +1,11 @@
 @import './../../styles/variables.module';
 @import './../../styles/mixins.module';
 
+.content {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .form, .message, .error{
     margin: 0 0 8rem 0;
     box-shadow: 0 4px 6px hsla(0, 0%, 0%, .7), 0 5px 15px hsla(0, 0%, 0%, .1);
@@ -99,7 +104,20 @@
 
 .message {
     padding: 5rem 2rem;
-    width: 55%;
+    width: 85%;
+    margin: 8rem auto;
+
+    @media (max-width: 980px) {
+        margin-top: 15rem;
+    }
+
+    @media (max-width: $bp-small) {
+        margin-top: 25rem;
+    }
+
+    @media (max-width: $bp-smallest) {
+        margin-top: 35rem;
+    }
 }
 
 .error {

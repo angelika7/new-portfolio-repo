@@ -1,12 +1,53 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './About.module.scss';
 import styles from './../../styles/_typography.module.scss';
 import me1 from './../../assets/images/about1-min.jpg';
 import me2 from './../../assets/images/about2-min.jpg';
 import me3 from './../../assets/images/about6-min.jpg';
 import me4 from './../../assets/images/about4-min.jpg';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 
 const About = () => {
+    const controls = useAnimation();
+    const { ref, inView } = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+        if(!inView) {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variantsText = {
+        hidden: { 
+            y: -100,
+            opacity: 0 
+        },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.3,
+            },
+        } 
+    }
+
+    const variantsImg = {
+        hidden: { 
+            y: 60,
+            scale: 0 
+        },
+        visible: {
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.3,
+            },
+        }
+    }
     return (
     <section className={classes.about} id='about'>
         <div className={classes.sloganBox}>
@@ -14,12 +55,12 @@ const About = () => {
         </div>
         <div className={classes.content}>
         <div className={classes.leftSide}> 
-            <div className={classes.descriptionBox}>
+            <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={variantsText} className={classes.descriptionBox}>
                 <p className={styles.textInfo}>Cześć! Mam na imię Angelika z wykształcenia jestem socjologiem, ale to właśnie programowanie stało się moją ogromną pasją. Od ponad 1.5 roku, sama uczę się frontendu. Korzystam z Internetu (kursów na Udemy, YouTuba, blogów, forów i platform do nauki). Lubię pracę kreatywną, do tej pory byłam Copywriterem. Szukam pracy, która pozwoli mi rozwijać zdobyte do tej pory umiejętności i poznać ciekawych ludzi.</p>
-            </div>
+            </motion.div>
         </div>
         <div className={classes.rightSide}>
-            <div className={classes.fotoBox}>
+            <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={variantsImg} className={classes.fotoBox}>
                 <svg className={classes.blob} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#F6E2DF" d="M56.8,-20.9C60.8,-6.4,42.2,13,20.4,29C-1.3,45,-26.1,57.5,-42.9,47.9C-59.8,38.3,-68.7,6.6,-60.2,-14.3C-51.7,-35.1,-25.8,-45,0.3,-45.1C26.5,-45.2,52.9,-35.5,56.8,-20.9Z" transform="translate(100 100)" />
                 </svg>
@@ -38,7 +79,7 @@ const About = () => {
                 <figure className={classes.fotoBox_foto}>
                     <img className={classes.fotoBox_foto___four} src={me3} alt=''></img>
                 </figure>
-            </div>
+            </motion.div>
         </div>
         </div>
     </section>

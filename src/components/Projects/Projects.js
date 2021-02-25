@@ -39,7 +39,7 @@ class Projects extends Component {
                     </div>
                     <div className={classes.projectsBox}>
                     {this.state.projects.map((e, i) => {
-                            return <ProjectItem key={i} info={e.info} active={e.isActive} title={e.title} bgImage={`url(${e.url})`} alt={e.alt} backInfo={e.backInfo} id={e.id} isFlipped={e.isFlipped} live={e.live} github={e.github} onClick={this.onClickHandler}/>
+                            return <ProjectItem key={i} info={e.info} active={e.isActive} title={e.title} url={e.url} alt={e.alt} backInfo={e.backInfo} id={e.id} isFlipped={e.isFlipped} live={e.live} github={e.github} onClick={this.onClickHandler}/>
                         })}
                     </div>
                 </div>
