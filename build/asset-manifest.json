@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/new-portfolio-repo/static/css/main.c044d335.chunk.css",
-    "main.js": "/new-portfolio-repo/static/js/main.ff3be2bb.chunk.js",
-    "main.js.map": "/new-portfolio-repo/static/js/main.ff3be2bb.chunk.js.map",
+    "main.js": "/new-portfolio-repo/static/js/main.19e7bbdb.chunk.js",
+    "main.js.map": "/new-portfolio-repo/static/js/main.19e7bbdb.chunk.js.map",
     "runtime-main.js": "/new-portfolio-repo/static/js/runtime-main.cb8c899d.js",
     "runtime-main.js.map": "/new-portfolio-repo/static/js/runtime-main.cb8c899d.js.map",
     "static/js/2.49776fe8.chunk.js": "/new-portfolio-repo/static/js/2.49776fe8.chunk.js",
@@ -24,6 +24,7 @@
     "static/media/grunt.bdf4df74.png": "/new-portfolio-repo/static/media/grunt.bdf4df74.png",
     "static/media/node.31574668.png": "/new-portfolio-repo/static/media/node.31574668.png",
     "static/media/php.f7891564.png": "/new-portfolio-repo/static/media/php.f7891564.png",
+    "static/media/project-books.2e22f2f5.png": "/new-portfolio-repo/static/media/project-books.2e22f2f5.png",
     "static/media/project-cafes.bd1fc573.png": "/new-portfolio-repo/static/media/project-cafes.bd1fc573.png",
     "static/media/project-cukiernia.dbb007d2.png": "/new-portfolio-repo/static/media/project-cukiernia.dbb007d2.png",
     "static/media/project-cv.ca6726f6.png": "/new-portfolio-repo/static/media/project-cv.ca6726f6.png",
@@ -42,6 +43,6 @@
     "static/js/runtime-main.cb8c899d.js",
     "static/js/2.49776fe8.chunk.js",
     "static/css/main.c044d335.chunk.css",
-    "static/js/main.ff3be2bb.chunk.js"
+    "static/js/main.19e7bbdb.chunk.js"
   ]
 }
