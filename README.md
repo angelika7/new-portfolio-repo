@@ -49,4 +49,4 @@ Welcome to my Portfolio. Find out about me in a short bio. See my latest project
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-![Alt text](../main/public/images/cv.jpg?raw=true "Optional Title")
+![Alt text](../main/public/images/cv.gif?raw=true "Optional Title")
