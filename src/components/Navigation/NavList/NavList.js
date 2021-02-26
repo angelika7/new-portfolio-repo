@@ -16,9 +16,8 @@ class NavList extends Component {
   }
 
   componentDidMount() {
+    document.querySelector(`ul li a:first-of-type`).classList.add(`${classes.active}`);
     window.addEventListener('scroll', this.changeActiveClass)
-    document.querySelector(`ul li a[href="/new-portfolio-repo#home"]`).classList.add(`${classes.active}`);
-    console.log(document.querySelector(`ul li a`))
    }
  
    changeActiveClass = () => { 
