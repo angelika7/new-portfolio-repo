@@ -7,26 +7,38 @@ import classes from './NavList.module.scss';
 class NavList extends Component {
   state = {
     IDs: [
-      {key: 0, id: 'home', section: '0', name: 'Home', active: true},
-      {key: 1, id: 'about', section: '1', name: 'O mnie'},
-      {key: 2, id: 'projects', section: '2', name: 'Projekty'},
-      {key: 3, id: 'stack', section: '3', name: 'Umiejętności'},
-      {key: 4, id: 'contact', section: '4', name: 'Kontakt'}
-    ],
-    isTop: true
+      {key: 0, id: '#home', name: 'Home', active: true},
+      {key: 1, id: '#about', name: 'O mnie'},
+      {key: 2, id: '#projects', name: 'Projekty'},
+      {key: 3, id: '#stack', name: 'Umiejętności'},
+      {key: 4, id: '#contact', name: 'Kontakt'}
+    ]
   }
 
   componentDidMount() {
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-          this.setState({ isTop })
-      }
-    });
-  }
+    window.addEventListener('scroll', this.changeActiveClass)
+    document.querySelector(`ul li a[href="/new-portfolio-repo#home"]`).classList.add(`${classes.active}`);
+    console.log(document.querySelector(`ul li a`))
+   }
+ 
+   changeActiveClass = () => { 
+     let links = document.querySelectorAll("nav ul li a");
+     let scrollTop = window.scrollY;
+     
+ 
+     links.forEach(element => {
+       let section = document.querySelector(element.parentNode.id);
+     
+       if (section.offsetTop - 6 <= scrollTop && section.offsetTop + section.offsetHeight > scrollTop + 6 ) {
+         element.classList.add(`${classes.active}`);
+       }
+       else{
+         element.classList.remove(`${classes.active}`);
+       }
+      })
+    }
 
   render() {
-
 
     return (
       
@@ -36,7 +48,7 @@ class NavList extends Component {
             onClick={this.props.onClick} 
             open={this.props.open} 
             key={el.key} 
-            id={el.section} 
+            id={el.id} 
             link={el.id} 
             active={el.active} 
             isVisible={this.props.isVisible}>{el.name}</NavItem>
