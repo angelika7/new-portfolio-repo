@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/new-portfolio-repo/static/css/main.c044d335.chunk.css",
+    "main.css": "/new-portfolio-repo/static/css/main.911bbabb.chunk.css",
     "main.js": "/new-portfolio-repo/static/js/main.f7d130ef.chunk.js",
     "main.js.map": "/new-portfolio-repo/static/js/main.f7d130ef.chunk.js.map",
     "runtime-main.js": "/new-portfolio-repo/static/js/runtime-main.cb8c899d.js",
@@ -8,7 +8,7 @@
     "static/js/2.5b809b81.chunk.js": "/new-portfolio-repo/static/js/2.5b809b81.chunk.js",
     "static/js/2.5b809b81.chunk.js.map": "/new-portfolio-repo/static/js/2.5b809b81.chunk.js.map",
     "index.html": "/new-portfolio-repo/index.html",
-    "static/css/main.c044d335.chunk.css.map": "/new-portfolio-repo/static/css/main.c044d335.chunk.css.map",
+    "static/css/main.911bbabb.chunk.css.map": "/new-portfolio-repo/static/css/main.911bbabb.chunk.css.map",
     "static/js/2.5b809b81.chunk.js.LICENSE.txt": "/new-portfolio-repo/static/js/2.5b809b81.chunk.js.LICENSE.txt",
     "static/media/10-min.61e28ba9.jpg": "/new-portfolio-repo/static/media/10-min.61e28ba9.jpg",
     "static/media/Header.module.scss": "/new-portfolio-repo/static/media/9-min.518b01d9.jpg",
@@ -42,7 +42,7 @@
   "entrypoints": [
     "static/js/runtime-main.cb8c899d.js",
     "static/js/2.5b809b81.chunk.js",
-    "static/css/main.c044d335.chunk.css",
+    "static/css/main.911bbabb.chunk.css",
     "static/js/main.f7d130ef.chunk.js"
   ]
 }
