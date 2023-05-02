@@ -56,7 +56,7 @@ const About = () => {
         <div className={classes.content}>
         <div className={classes.leftSide}> 
             <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={variantsText} className={classes.descriptionBox}>
-                <p className={styles.textInfo}>Cześć! Mam na imię Angelika z wykształcenia jestem socjologiem, ale to właśnie programowanie stało się moją ogromną pasją. Od ponad 1.5 roku, sama uczę się frontendu. Korzystam z Internetu (kursów na Udemy, YouTuba, blogów, forów i platform do nauki). Lubię pracę kreatywną, do tej pory byłam Copywriterem. Szukam pracy, która pozwoli mi rozwijać zdobyte do tej pory umiejętności i poznać ciekawych ludzi.</p>
+                <p className={styles.textInfo}>Cześć! Mam na imię Angelika, od 2 lat pracuję jako Frontend Developer wykorzystując nowoczesne rozwiązania takie jak framework Vue.js i biblioteka React.js. Posiadam także doświadczenie w pracy z Shopify i Shopify Plus. Obecnie szukam pracy, która pozwoli mi rozwinąć zdobyte do tej pory umiejętności i pozyskać nowe.  </p>
             </motion.div>
         </div>
         <div className={classes.rightSide}>

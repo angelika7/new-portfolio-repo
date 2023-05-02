@@ -7,7 +7,7 @@ const toolItem = (props) => {
     return (
         <div className={classes.item}>
             <div className={classes.imgBox}>
-                <img className={classes.img} src={props.url} alt={props.alt}/>
+                <img className={props.small ? [classes.img, classes.img___small].join(' ') : classes.img} src={props.url} alt={props.alt}/>
             </div>
             <p className={[styleText.info, styleText.info___tools].join(' ')}>{props.info}</p>    
             <div className={classes.textBox}>

@@ -72,7 +72,7 @@ const Stack = () =>  {
             </div>
             <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={list} className={classes.toolsBox}> 
                 {data.toolsArray.map((e, i) => {
-                    return <motion.div key={i} custom={i} ref={ref} animate={controls} variants={variantsStack}><ToolItem key={i} info={e.info} url={e.url} alt={e.alt} backInfo={e.backInfo} id={e.id} /></motion.div>
+                    return <motion.div key={i} custom={i} ref={ref} animate={controls} variants={variantsStack}><ToolItem key={i} info={e.info} url={e.url} alt={e.alt} backInfo={e.backInfo} id={e.id} small={e.small}/></motion.div>
                 })}
                 <motion.div ref={ref} initial="hidden" animate={controls} exit="hidden" variants={list} className={classes.imgOnly}>
                     {data.toolsImgOnly.map((e, i) => {
